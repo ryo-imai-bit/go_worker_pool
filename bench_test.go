@@ -16,8 +16,8 @@ func BenchmarkConcurrent(b *testing.B) {
 
 func BenchmarkNonconcurrent(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		for _, work := range work.CreateJobs(20) {
-			work.DoWork(work, 1)
+		for _, job := range work.CreateJobs(20) {
+			work.DoWork(job, 1)
 		}
 	}
 }
