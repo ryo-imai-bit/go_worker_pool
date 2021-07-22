@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	//"./limiter"
-	"tutorials/concurrent-limiter/pool"
-	"tutorials/concurrent-limiter/work"
+	"github.com/ryo-imai-bit/go_worker_pool/pool"
+	"github.com/ryo-imai-bit/go_worker_pool/work"
 )
 
 const WORKER_COUNT = 5

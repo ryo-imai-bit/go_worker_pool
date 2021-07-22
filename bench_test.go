@@ -1,8 +1,8 @@
 package main 
 
 import "testing"
-import "tutorials/concurrent-limiter/pool"
-import "tutorials/concurrent-limiter/work"
+import "github.com/ryo-imai-bit/go_worker_pool/pool"
+import "github.com/ryo-imai-bit/go_worker_pool/work"
 
 func BenchmarkConcurrent(b *testing.B) {
 	collector := pool.StartDispatcher(WORKER_COUNT) // start up worker pool

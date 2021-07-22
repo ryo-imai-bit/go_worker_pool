@@ -2,7 +2,7 @@ package pool
 
 import (
 	"log"
-	"tutorials/concurrent-limiter/work"
+	"github.com/ryo-imai-bit/go_worker_pool/work"
 )
 
 type Work struct {
