@@ -2,7 +2,7 @@ package main
 
 import "testing"
 import "github.com/ryo-imai-bit/go_worker_pool/pool"
-import "github.com/ryo-imai-bit/go_worker_pool/work"
+import  work "github.com/ryo-imai-bit/go_worker_pool/work"
 
 func BenchmarkConcurrent(b *testing.B) {
 	collector := pool.StartDispatcher(WORKER_COUNT) // start up worker pool
@@ -17,7 +17,7 @@ func BenchmarkConcurrent(b *testing.B) {
 func BenchmarkNonconcurrent(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		for _, work := range work.CreateJobs(20) {
-			job.DoWork(work, 1)
+			work.DoWork(work, 1)
 		}
 	}
 }

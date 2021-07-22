@@ -4,7 +4,7 @@ import (
 	"log"
 	//"./limiter"
 	"github.com/ryo-imai-bit/go_worker_pool/pool"
-	"github.com/ryo-imai-bit/go_worker_pool/work"
+	work "github.com/ryo-imai-bit/go_worker_pool/work"
 )
 
 const WORKER_COUNT = 5
